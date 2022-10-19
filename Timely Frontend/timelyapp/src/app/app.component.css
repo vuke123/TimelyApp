@@ -1,0 +1,47 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-item{
+    margin: 1rem;
+}
+
+
+.title {
+    font-size: 40px;
+    margin: 50px;
+}
+
+
+.startButton {
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 15px 100px;
+}
+
+th,
+td {
+    padding: 1em;    
+}
+
+.table{
+    border-radius: 20px;
+    width: 50% !important;
+    border-collapse: separate !important;
+}
+
+.stopTimerContainer {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}

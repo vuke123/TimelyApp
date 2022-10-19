@@ -1,0 +1,12 @@
+<div class="popUp">
+<div class="form">
+  <div class="tabForm">
+    <button (click) ="exit()" class="btn btn-light">x</button>
+  </div>
+    <div class="flex-container">
+      <label for="projectName">Project name*:</label>
+      <input type="text" #projectName name="projectName" />
+      <button (click)="updateProject(projectName.value)" class="stopButton btn btn-light">STOP TIMER</button>
+    </div>
+</div>
+</div>

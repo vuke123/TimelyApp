@@ -1,0 +1,43 @@
+.form {
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 20px;
+    width: 500px;
+    background-color: rgb(254, 254, 254);
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    margin: -25px 0 0 -25px;
+}
+
+.tabForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-light {
+    border-top-right-radius: 20px !important;
+    background-color: rgb(233, 217, 217);
+    border: none;
+}
+
+.btn-light:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+
+.stopButton{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    height: 70px;
+}
