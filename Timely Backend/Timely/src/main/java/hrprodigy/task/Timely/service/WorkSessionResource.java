@@ -30,8 +30,9 @@ public class WorkSessionResource {
         return new ResponseEntity<>(session, HttpStatus.CREATED);
 
     }
-    @PostMapping("/update")
-    public ResponseEntity<WorkSession> updateSession(String projectName){
+
+    @PostMapping("/update/{projectName}")
+    public ResponseEntity<WorkSession> updateSession(@PathVariable("projectName") String projectName){
         WorkSession session = sessionService.updateSession(projectName);
         return new ResponseEntity<>(session, HttpStatus.CREATED);
 

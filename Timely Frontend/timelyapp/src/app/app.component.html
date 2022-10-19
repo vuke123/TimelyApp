@@ -6,7 +6,7 @@
   >
     <button
       (click)="addProject()"
-      class="btn btn-light  flex-item"
+      class="btn btn-light flex-item"
       type="button"
     >
       Start
@@ -21,7 +21,7 @@
       Stop
     </button>
   </ng-template>
-  <table class=" border table table-striped">
+  <table class="border table table-striped">
     <thead>
       <tr>
         <th>Project</th>
@@ -31,10 +31,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let session of sessions">
+      <tr *ngFor="let session of sessions.slice().reverse()">
         <td>{{ session.project }}</td>
         <td>{{ session.start }}</td>
-        <td *ngIf="session.stop == null">{{ session.stop }}</td>
+        <td>{{ session.stop }}</td>
         <td>{{ session.duration }}</td>
       </tr>
     </tbody>

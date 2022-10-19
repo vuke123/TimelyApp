@@ -26,6 +26,7 @@ public class WorkSessionService {
     }
 
     public WorkSession updateSession(String projectName){
+        System.out.println(projectName);
         WorkSession workSession = null;
         List<WorkSession> allSessions = worksessionrepo.findAll();
         for(WorkSession session: allSessions){
@@ -43,11 +44,16 @@ public class WorkSessionService {
         Duration duration = Duration.between(workSession.getStart().toLocalTime(), LocalDateTime.now().toLocalTime());
         long seconds = duration.getSeconds();
         long hours = seconds/3600;
-        long minutes = seconds%3600;
-        durationString = String.valueOf(period.getDays()) + "days "
+        long leftSeconds = seconds%3600;
+        long minutes = leftSeconds/60;
+        seconds = leftSeconds%60;
+
+        durationString = String.valueOf(period.getDays()) + " days "
         + String.valueOf(hours) + " hours " + String.valueOf(minutes) + " minutes";
         workSession.setDuration(durationString);
         worksessionrepo.deleteById(start);
+        System.out.println(workSession.getDuration() + " --- duration");
+        System.out.println(workSession.getStop() + " --- stop");
         return worksessionrepo.save(workSession);
     }
 

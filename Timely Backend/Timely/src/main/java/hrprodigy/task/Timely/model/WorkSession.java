@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
-//@Table(name="work_sessions")
+
 //@CrossOrigin
 public class WorkSession implements Serializable {
 

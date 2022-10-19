@@ -20,9 +20,10 @@ export class PopUpComponent implements OnInit {
 
   public updateProject(name: string): void {
     this.sessionService.updateSession(name).subscribe((response: WorkSession) => {
+      console.log(name);
       location.reload();
     });
-    
+
   }
 
 

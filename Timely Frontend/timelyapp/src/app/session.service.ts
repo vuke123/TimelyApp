@@ -12,7 +12,6 @@ export class SessionService {
   constructor(private http: HttpClient) { }
 
   public getSessions(): Observable<WorkSession[]> {
-
     return this.http.get<WorkSession[]>(`${this.apiServerUrl}/sessions`);
   }
 
@@ -21,7 +20,7 @@ export class SessionService {
   }
 
   public updateSession(name: string): Observable<WorkSession> {
-    return this.http.post<WorkSession>(`${this.apiServerUrl}/sessions/update`, name: any);
+    return this.http.post<WorkSession>(`${this.apiServerUrl}/sessions/update/${name}`, name);
   }
 
 }

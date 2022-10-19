@@ -24,6 +24,9 @@
     font-size: 16px;
     border-radius: 15px;
     padding: 15px 100px;
+    position: absolute;
+    left: 42%;
+    top: 40%;
 }
 
 th,
